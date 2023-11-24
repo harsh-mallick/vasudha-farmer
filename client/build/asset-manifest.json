@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.53632223.css",
-    "main.js": "/static/js/main.870584b9.js",
+    "main.js": "/static/js/main.d7884f58.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Farmland.jpg": "/static/media/Farmland.2bad3dd0e7c386283c83.jpg",
     "static/media/frame-2@3x.png": "/static/media/frame-2@3x.9811af1182402ed39434.png",
@@ -21,11 +21,11 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.53632223.css.map": "/static/css/main.53632223.css.map",
-    "main.870584b9.js.map": "/static/js/main.870584b9.js.map",
+    "main.d7884f58.js.map": "/static/js/main.d7884f58.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53632223.css",
-    "static/js/main.870584b9.js"
+    "static/js/main.d7884f58.js"
   ]
 }
