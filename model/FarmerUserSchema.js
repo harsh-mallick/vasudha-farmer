@@ -38,12 +38,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }, 
-    role:{
+    },
+    role: {
         type: String,
         required: true,
         allowedValues: ['Farmer', 'Buyer', 'Transporter']
-    }, 
+    },
     Crptype: {
         type: String,
         default: "Not set by user",
@@ -55,7 +55,7 @@ const userSchema = new mongoose.Schema({
 
     tokens: [
         {
-            token:{
+            token: {
                 type: String,
                 required: true,
             }
@@ -67,18 +67,18 @@ const userSchema = new mongoose.Schema({
 
 
 
-userSchema.pre('save', async function(next) {
-    if(this.isModified('password')){
+userSchema.pre('save', async function (next) {
+    if (this.isModified('password')) {
         this.password = await bcrypt.hash(this.password + "23945", 12)
     }
     next();
 })
 
 
-userSchema.methods.generateAuthToken = async function(){
+userSchema.methods.generateAuthToken = async function () {
     try {
-        let token = jwt.sign({_id:this._id}, "HARSHisAsuperCoderboy");
-        this.tokens = this.tokens.concat({token: token});
+        let token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
+        this.tokens = this.tokens.concat({ token: token });
         await this.save();
         return token;
         next()
